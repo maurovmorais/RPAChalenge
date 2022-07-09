@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+botRPAChallenge/__init__.py
+botRPAChallenge/__main__.py
+botRPAChallenge/bot.py
+botRPAChallenge.egg-info/PKG-INFO
+botRPAChallenge.egg-info/SOURCES.txt
+botRPAChallenge.egg-info/dependency_links.txt
+botRPAChallenge.egg-info/requires.txt
+botRPAChallenge.egg-info/top_level.txt
+botRPAChallenge/resources/start.png
