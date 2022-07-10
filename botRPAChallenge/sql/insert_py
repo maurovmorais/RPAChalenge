@@ -1,0 +1,30 @@
+from sql import connect
+from pyodbc import Error
+
+vcon=connect.ConexaoBanco()
+
+#Dados para inserção
+id_venda = 3
+cliente = 'Felipe'
+produtos= 'Fone de ouvido'
+data_venda = '10.07.2022'
+preco = 450.00
+quantidade = 1
+
+#Query
+vsql  = f"""insert into Vendas(id_venda,cliente,produtos,data_venda,preco,quantidade) 
+	values({id_venda},'{cliente}','{produtos}','{data_venda}',{preco},{quantidade})"""
+
+def Insert(conexao,sql):  
+    try: 
+        cursor = conexao.cursor()
+        cursor.execute(sql)
+        conexao.commit()
+        print("Dado inserido !!!")
+    except Error as ex:
+        print(f"Erro encontrado !!!!",ex)
+ 
+Insert(vcon,vsql)
+
+##### Fechar Conexão
+vcon.close()
